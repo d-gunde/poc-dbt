@@ -189,3 +189,130 @@ SELECT * FROM ref_data
 [0m14:12:51.105306 [debug] [MainThread]: Command `dbt run` succeeded at 14:12:51.105306 after 9.98 seconds
 [0m14:12:51.109452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2F23F6950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D285A856F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D28564AB60>]}
 [0m14:12:51.114570 [debug] [MainThread]: Flushing usage events
+[0m14:28:06.948917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DE7BB68C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DE7369F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DE7369D50>]}
+
+
+============================== 14:28:06.958900 | f670923e-41ac-4490-b503-e49617961947 ==============================
+[0m14:28:06.958900 [info ] [MainThread]: Running with dbt=1.7.13
+[0m14:28:06.958900 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\gunde\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\gunde\\Documents\\POC\\poc-dbt\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:28:08.133281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DE7369FF0>]}
+[0m14:28:08.242087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFADE76A0>]}
+[0m14:28:08.242087 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m14:28:08.258399 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m14:28:08.358716 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 2 files added, 0 files changed.
+[0m14:28:08.358716 [debug] [MainThread]: Partial parsing: added file: dbt_poc_a://models\dbt_poc_a\first_dbt_model.sql
+[0m14:28:08.358716 [debug] [MainThread]: Partial parsing: added file: dbt_poc_a://models\dbt_poc_a\second_dbt_model.sql
+[0m14:28:08.358716 [debug] [MainThread]: Partial parsing: deleted file: dbt_poc_a://models\dbt_poc_a\my_first_dbt_model.sql
+[0m14:28:08.358716 [debug] [MainThread]: Partial parsing: deleted file: dbt_poc_a://models\dbt_poc_a\my_second_dbt_model.sql
+[0m14:28:08.598058 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models\dbt_poc_a\schema.yml'
+[0m14:28:08.598058 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models\dbt_poc_a\schema.yml'
+[0m14:28:08.745229 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_poc_a.unique_my_first_dbt_model_id.16e066b321' (models\dbt_poc_a\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m14:28:08.745229 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_poc_a.not_null_my_first_dbt_model_id.5fb22c2710' (models\dbt_poc_a\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m14:28:08.745229 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_poc_a.unique_my_second_dbt_model_id.57a0f8c493' (models\dbt_poc_a\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m14:28:08.745229 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_poc_a.not_null_my_second_dbt_model_id.151b76d778' (models\dbt_poc_a\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m14:28:08.760727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB2DCC70>]}
+[0m14:28:08.847655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB127670>]}
+[0m14:28:08.847655 [info ] [MainThread]: Found 2 models, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m14:28:08.855875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB127640>]}
+[0m14:28:08.857851 [info ] [MainThread]: 
+[0m14:28:08.861674 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:28:08.863723 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST'
+[0m14:28:08.876258 [debug] [ThreadPool]: Using snowflake connection "list_TEST"
+[0m14:28:08.882661 [debug] [ThreadPool]: On list_TEST: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_poc_a", "target_name": "dev", "connection_name": "list_TEST"} */
+show terse schemas in database TEST
+    limit 10000
+[0m14:28:08.882661 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:28:10.022995 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m14:28:10.031500 [debug] [ThreadPool]: On list_TEST: Close
+[0m14:28:10.152524 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TEST_DEV'
+[0m14:28:10.160780 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DEV"
+[0m14:28:10.160780 [debug] [ThreadPool]: On list_TEST_DEV: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_poc_a", "target_name": "dev", "connection_name": "list_TEST_DEV"} */
+show terse objects in TEST.DEV limit 10000
+[0m14:28:10.160780 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:28:11.324559 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m14:28:11.331620 [debug] [ThreadPool]: On list_TEST_DEV: Close
+[0m14:28:11.457983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB0A7130>]}
+[0m14:28:11.457983 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:28:11.457983 [info ] [MainThread]: 
+[0m14:28:11.473010 [debug] [Thread-1 (]: Began running node model.dbt_poc_a.first_dbt_model
+[0m14:28:11.473010 [info ] [Thread-1 (]: 1 of 2 START sql table model DEV.first_dbt_model ............................... [RUN]
+[0m14:28:11.482900 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.dbt_poc_a.first_dbt_model'
+[0m14:28:11.482900 [debug] [Thread-1 (]: Began compiling node model.dbt_poc_a.first_dbt_model
+[0m14:28:11.492985 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_poc_a.first_dbt_model"
+[0m14:28:11.492985 [debug] [Thread-1 (]: Timing info for model.dbt_poc_a.first_dbt_model (compile): 14:28:11.482900 => 14:28:11.492985
+[0m14:28:11.492985 [debug] [Thread-1 (]: Began executing node model.dbt_poc_a.first_dbt_model
+[0m14:28:11.525312 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_poc_a.first_dbt_model"
+[0m14:28:11.525312 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_poc_a.first_dbt_model"
+[0m14:28:11.525312 [debug] [Thread-1 (]: On model.dbt_poc_a.first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_poc_a", "target_name": "dev", "node_id": "model.dbt_poc_a.first_dbt_model"} */
+create or replace transient table TEST.DEV.first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id, 'John' AS first_name
+    union all
+    select 2 as id, 'Jane' AS first_name
+
+)
+
+select *
+from source_data
+        );
+[0m14:28:11.540331 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:28:14.043145 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:28:14.103360 [debug] [Thread-1 (]: Timing info for model.dbt_poc_a.first_dbt_model (execute): 14:28:11.492985 => 14:28:14.103360
+[0m14:28:14.108546 [debug] [Thread-1 (]: On model.dbt_poc_a.first_dbt_model: Close
+[0m14:28:14.293660 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB3E0C10>]}
+[0m14:28:14.293660 [info ] [Thread-1 (]: 1 of 2 OK created sql table model DEV.first_dbt_model .......................... [[32mSUCCESS 1[0m in 2.82s]
+[0m14:28:14.301673 [debug] [Thread-1 (]: Finished running node model.dbt_poc_a.first_dbt_model
+[0m14:28:14.301673 [debug] [Thread-1 (]: Began running node model.dbt_poc_a.second_dbt_model
+[0m14:28:14.301673 [info ] [Thread-1 (]: 2 of 2 START sql view model DEV.second_dbt_model ............................... [RUN]
+[0m14:28:14.311316 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_poc_a.first_dbt_model, now model.dbt_poc_a.second_dbt_model)
+[0m14:28:14.312132 [debug] [Thread-1 (]: Began compiling node model.dbt_poc_a.second_dbt_model
+[0m14:28:14.312132 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_poc_a.second_dbt_model"
+[0m14:28:14.312132 [debug] [Thread-1 (]: Timing info for model.dbt_poc_a.second_dbt_model (compile): 14:28:14.312132 => 14:28:14.312132
+[0m14:28:14.326700 [debug] [Thread-1 (]: Began executing node model.dbt_poc_a.second_dbt_model
+[0m14:28:14.407929 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_poc_a.second_dbt_model"
+[0m14:28:14.421277 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_poc_a.second_dbt_model"
+[0m14:28:14.425991 [debug] [Thread-1 (]: On model.dbt_poc_a.second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_poc_a", "target_name": "dev", "node_id": "model.dbt_poc_a.second_dbt_model"} */
+create or replace   view TEST.DEV.second_dbt_model
+  
+   as (
+    WITH  ref_data AS (
+    SELECT 1 AS id, 'Doe' AS second_name
+    UNION ALL 
+    SELECT 2 AS id, 'Smith' AS second_name
+)
+
+SELECT * FROM ref_data
+  );
+[0m14:28:14.429254 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:28:16.426116 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:28:16.441944 [debug] [Thread-1 (]: Timing info for model.dbt_poc_a.second_dbt_model (execute): 14:28:14.326700 => 14:28:16.441944
+[0m14:28:16.441944 [debug] [Thread-1 (]: On model.dbt_poc_a.second_dbt_model: Close
+[0m14:28:16.657913 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f670923e-41ac-4490-b503-e49617961947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB0A6680>]}
+[0m14:28:16.657913 [info ] [Thread-1 (]: 2 of 2 OK created sql view model DEV.second_dbt_model .......................... [[32mSUCCESS 1[0m in 2.35s]
+[0m14:28:16.657913 [debug] [Thread-1 (]: Finished running node model.dbt_poc_a.second_dbt_model
+[0m14:28:16.657913 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:28:16.673030 [debug] [MainThread]: Connection 'list_TEST' was properly closed.
+[0m14:28:16.676313 [debug] [MainThread]: Connection 'list_TEST_DEV' was properly closed.
+[0m14:28:16.679516 [debug] [MainThread]: Connection 'model.dbt_poc_a.second_dbt_model' was properly closed.
+[0m14:28:16.679516 [info ] [MainThread]: 
+[0m14:28:16.685782 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 7.82 seconds (7.82s).
+[0m14:28:16.689146 [debug] [MainThread]: Command end result
+[0m14:28:16.720806 [info ] [MainThread]: 
+[0m14:28:16.720806 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:28:16.720806 [info ] [MainThread]: 
+[0m14:28:16.720806 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m14:28:16.737352 [debug] [MainThread]: Command `dbt run` succeeded at 14:28:16.737352 after 9.92 seconds
+[0m14:28:16.737352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DE7BB68C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB2DEC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DFB17A2C0>]}
+[0m14:28:16.737352 [debug] [MainThread]: Flushing usage events
